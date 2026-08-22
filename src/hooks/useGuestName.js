@@ -1,29 +1,24 @@
 import { useMemo } from "react";
 
 export function useGuestName() {
-  return useMemo(() => {
-    const path = window.location.pathname;
+  const guestName = useMemo(() => {
+    const pathname = window.location.pathname;
 
-    const basePath = "/wedding-invitation/";
+    // Ambil bagian terakhir dari URL
+    const segments = pathname.split("/").filter(Boolean);
+    const slug = segments.at(-1);
 
-    if (!path.startsWith(basePath)) {
+    // Jika tidak ada nama tamu
+    if (!slug || slug === "wedding-invitation") {
       return "Tamu Undangan";
     }
 
-    let guestName = path.slice(basePath.length);
-
-    guestName = guestName
-      .replace(/^\/+|\/+$/g, "")
-      .replace(/[-_]+/g, " ")
-      .trim();
-
-    if (!guestName) {
-      return "Tamu Undangan";
-    }
-
-    return guestName
-      .split(" ")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    // Ubah slug menjadi nama
+    return slug
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   }, []);
+
+  return guestName;
 }
