@@ -100,108 +100,6 @@ ${message || "-"}
           </p>
         </div>
 
-        {/* Gift */}
-        <div
-          className="
-            mb-10
-            flex
-            flex-col
-            items-center
-            rounded-2xl
-            border
-            border-[#EAEAE5]/15
-            bg-[#1C2A32]/25
-            px-6
-            py-8
-            backdrop-blur-[2px]
-          "
-          data-aos="fade-up"
-        >
-          <Gift size={22} strokeWidth={1.3} className="text-[#9BA8A1]" />
-
-          <p
-            className="
-              mt-4
-              text-[9px]
-              font-medium
-              uppercase
-              tracking-[0.45em]
-              text-[#EAEAE5]/80
-            "
-          >
-            Wedding Gift
-          </p>
-
-          <p
-            className="
-              mt-3
-              max-w-[280px]
-              text-xs
-              leading-relaxed
-              text-[#C2C8BF]
-            "
-          >
-            Doa restu Anda merupakan karunia yang sangat berarti. Namun jika
-            memberi merupakan ungkapan tanda kasih, kami menerimanya dengan
-            penuh gratitude.
-          </p>
-
-          <div className="mt-5 flex flex-col items-center">
-            <span
-              className="
-                font-mono
-                text-base
-                font-bold
-                tracking-[0.12em]
-                text-[#EAEAE5]
-              "
-            >
-              {gift.bank} - {gift.accountNumber}
-            </span>
-
-            <span className="mt-1 text-xs text-[#C2C8BF]">a.n {gift.holder}</span>
-
-            <button
-              type="button"
-              onClick={handleCopy}
-              className="
-                mt-4
-                flex
-                items-center
-                gap-2
-                rounded-xl
-                border
-                border-[#9BA8A1]/40
-                bg-[#324C5D]/70
-                px-4
-                py-2.5
-                text-[10px]
-                font-medium
-                uppercase
-                tracking-[0.2em]
-                text-[#EAEAE5]
-                transition-all
-                duration-300
-                hover:border-[#9BA8A1]/70
-                hover:bg-[#455E6A]/80
-                active:scale-[0.98]
-              "
-            >
-              {copied ? (
-                <>
-                  <Check size={13} strokeWidth={2} />
-                  Tersalin
-                </>
-              ) : (
-                <>
-                  <Copy size={13} strokeWidth={1.5} />
-                  Salin Nomor
-                </>
-              )}
-            </button>
-          </div>
-        </div>
-
         {/* Form */}
         <form onSubmit={handleSubmit} className="w-full" data-aos="fade-up">
           {/* Nama */}
@@ -391,6 +289,108 @@ ${message || "-"}
           />
 
           <span className="text-[10px]">Konfirmasi melalui WhatsApp</span>
+        </div>
+
+        {/* Gift */}
+        <div
+          className="
+            mt-10
+            flex
+            flex-col
+            items-center
+            rounded-2xl
+            border
+            border-[#EAEAE5]/15
+            bg-[#1C2A32]/25
+            px-6
+            py-8
+            backdrop-blur-[2px]
+          "
+          data-aos="fade-up"
+        >
+          <Gift size={22} strokeWidth={1.3} className="text-[#9BA8A1]" />
+
+          <p
+            className="
+              mt-4
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[0.45em]
+              text-[#EAEAE5]/80
+            "
+          >
+            Wedding Gift
+          </p>
+
+          <p
+            className="
+              mt-3
+              max-w-[280px]
+              text-xs
+              leading-relaxed
+              text-[#C2C8BF]
+            "
+          >
+            Doa restu Anda merupakan karunia yang sangat berarti. Namun jika
+            memberi merupakan ungkapan tanda kasih, kami menerimanya dengan
+            penuh gratitude.
+          </p>
+
+          <div className="mt-5 flex flex-col items-center">
+            <span
+              className="
+                font-mono
+                text-base
+                font-bold
+                tracking-[0.12em]
+                text-[#EAEAE5]
+              "
+            >
+              {gift.bank} - {gift.accountNumber}
+            </span>
+
+            <span className="mt-1 text-xs text-[#C2C8BF]">a.n {gift.holder}</span>
+
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="
+                mt-4
+                flex
+                items-center
+                gap-2
+                rounded-xl
+                border
+                border-[#9BA8A1]/40
+                bg-[#324C5D]/70
+                px-4
+                py-2.5
+                text-[10px]
+                font-medium
+                uppercase
+                tracking-[0.2em]
+                text-[#EAEAE5]
+                transition-all
+                duration-300
+                hover:border-[#9BA8A1]/70
+                hover:bg-[#455E6A]/80
+                active:scale-[0.98]
+              "
+            >
+              {copied ? (
+                <>
+                  <Check size={13} strokeWidth={2} />
+                  Tersalin
+                </>
+              ) : (
+                <>
+                  <Copy size={13} strokeWidth={1.5} />
+                  Salin Nomor
+                </>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Bottom Ornament */}
