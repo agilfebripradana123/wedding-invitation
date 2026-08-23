@@ -15,7 +15,7 @@ export function Hero() {
         text-center
       "
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center" data-aos="fade-up">
         {/* Small Heading */}
         <p
           className="

@@ -21,7 +21,7 @@ export function EventSection() {
         {/* =========================================
             HEADER
         ========================================= */}
-        <div className="mb-14 flex flex-col items-center">
+        <div className="mb-14 flex flex-col items-center" data-aos="fade-up">
           <span className="text-sm text-[#9BA8A1]">✦</span>
 
           <p
@@ -67,7 +67,7 @@ export function EventSection() {
         {/* =========================================
             RESEPSI
         ========================================= */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" data-aos="fade-up">
           <p
             className="
               text-[9px]
@@ -103,7 +103,7 @@ export function EventSection() {
             <p
               className="
     mt-3
-    text-lg
+    text-xl
     font-bold
     text-[#EAEAE5]
   "
@@ -114,7 +114,7 @@ export function EventSection() {
             <p
               className="
     mt-1
-    text-base
+    text-lg
     font-bold
     text-[#EAEAE5]
   "
@@ -131,11 +131,11 @@ export function EventSection() {
               max-w-[280px]
               items-start
               justify-center
-              gap-2
+              gap-1
             "
           >
             <MapPin
-              size={15}
+              size={20}
               strokeWidth={1.3}
               className="
                 mt-0.5
@@ -146,9 +146,10 @@ export function EventSection() {
 
             <p
               className="
-    text-sm
+    text-base
     font-bold
     leading-relaxed
+    text-center
     text-[#EAEAE5]
   "
             >
@@ -222,7 +223,7 @@ export function EventSection() {
             <p
               className="
     mt-3
-    text-base
+    text-lg
     font-bold
     text-[#EAEAE5]
   "
@@ -244,7 +245,7 @@ export function EventSection() {
           >
             <Clock3 size={19} strokeWidth={1.6} />
 
-            <span className="text-base font-bold">{akad.time}</span>
+            <span className="text-lg font-bold">{akad.time}</span>
           </div>
 
           {/* Location */}
@@ -255,11 +256,11 @@ export function EventSection() {
               max-w-[280px]
               items-start
               justify-center
-              gap-2
+              gap-1
             "
           >
             <MapPin
-              size={15}
+              size={20}
               strokeWidth={1.3}
               className="
                 mt-0.5
@@ -270,9 +271,10 @@ export function EventSection() {
 
             <p
               className="
-    text-sm
+    text-base
     font-bold
     leading-relaxed
+    text-center
     text-[#EAEAE5]
   "
             >

@@ -19,7 +19,7 @@ export function GallerySection() {
         {/* =========================================
             HEADER
         ========================================= */}
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-12 flex flex-col items-center" data-aos="fade-up">
           <span className="text-sm text-[#9BA8A1]">✦</span>
 
           <p
@@ -66,10 +66,11 @@ export function GallerySection() {
         ========================================= */}
         <div className="space-y-3">
           {/* =========================================
-              MAIN PHOTO
+              PHOTO 1 - MAIN
           ========================================= */}
           {galleryData[0] && (
             <div
+              data-aos="zoom-in"
               className="
                 group
                 relative
@@ -78,6 +79,7 @@ export function GallerySection() {
                 border
                 border-[#EAEAE5]/20
                 bg-[#1C2A32]/40
+                shadow-[0_10px_30px_rgba(0,0,0,0.15)]
               "
             >
               <img
@@ -95,20 +97,19 @@ export function GallerySection() {
                 "
               />
 
-              {/* Soft Overlay */}
               <div
                 className="
                   pointer-events-none
                   absolute
                   inset-0
                   bg-gradient-to-t
-                  from-[#080C0F]/25
+                  from-[#080C0F]/30
                   via-transparent
                   to-transparent
                 "
               />
 
-              {/* Corner Ornament */}
+              {/* Ornament */}
               <div
                 className="
                   pointer-events-none
@@ -140,12 +141,14 @@ export function GallerySection() {
           )}
 
           {/* =========================================
-              SECONDARY PHOTOS
+              PHOTO 2 & 3
           ========================================= */}
           <div className="grid grid-cols-2 gap-3">
-            {galleryData.slice(1, 3).map((item) => (
+            {galleryData.slice(1, 3).map((item, index) => (
               <div
                 key={item.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
                 className="
                   group
                   relative
@@ -171,7 +174,6 @@ export function GallerySection() {
                   "
                 />
 
-                {/* Overlay */}
                 <div
                   className="
                     pointer-events-none
@@ -186,12 +188,137 @@ export function GallerySection() {
               </div>
             ))}
           </div>
+
+          {/* =========================================
+              PHOTO 4 & 5
+          ========================================= */}
+          <div className="grid grid-cols-2 gap-3">
+            {galleryData.slice(3, 5).map((item, index) => (
+              <div
+                key={item.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[22px]
+                  border
+                  border-[#EAEAE5]/15
+                  bg-[#1C2A32]/40
+                "
+              >
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="
+                    block
+                    aspect-[4/5]
+                    w-full
+                    object-cover
+                    transition-transform
+                    duration-700
+                    ease-out
+                    group-hover:scale-[1.05]
+                  "
+                />
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    bg-[#080C0F]/10
+                    transition-opacity
+                    duration-500
+                    group-hover:opacity-0
+                  "
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* =========================================
+              PHOTO 6 - MAIN
+          ========================================= */}
+          {galleryData[5] && (
+            <div
+              data-aos="zoom-in"
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[28px]
+                border
+                border-[#EAEAE5]/20
+                bg-[#1C2A32]/40
+                shadow-[0_10px_30px_rgba(0,0,0,0.15)]
+              "
+            >
+              <img
+                src={galleryData[5].image}
+                alt={galleryData[5].alt}
+                className="
+                  block
+                  aspect-[4/5]
+                  w-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  ease-out
+                  group-hover:scale-[1.03]
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-[#080C0F]/30
+                  via-transparent
+                  to-transparent
+                "
+              />
+
+              {/* Ornament */}
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  bottom-4
+                  left-4
+                  h-8
+                  w-8
+                  border-b
+                  border-l
+                  border-[#EAEAE5]/50
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  right-4
+                  top-4
+                  h-8
+                  w-8
+                  border-r
+                  border-t
+                  border-[#EAEAE5]/50
+                "
+              />
+            </div>
+          )}
         </div>
 
         {/* =========================================
             BOTTOM ORNAMENT
         ========================================= */}
         <div
+          data-aos="fade-up"
           className="
             mt-14
             flex

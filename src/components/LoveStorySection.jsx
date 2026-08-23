@@ -17,7 +17,7 @@ export function LoveStorySection() {
     >
       <div className="w-full">
         {/* Section Header */}
-        <div className="mb-16 flex flex-col items-center">
+        <div className="mb-16 flex flex-col items-center" data-aos="fade-up">
           <Heart size={18} strokeWidth={1.4} className="text-[#EAEAE5]" />
 
           <p
@@ -69,6 +69,8 @@ export function LoveStorySection() {
               return (
                 <div
                   key={story.id}
+                  data-aos="fade-up"
+                  data-aos-delay={Math.min(index * 100, 300)}
                   className="
                     relative
                     grid

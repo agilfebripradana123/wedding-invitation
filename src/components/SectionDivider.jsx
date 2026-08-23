@@ -3,6 +3,7 @@ import divider from "../assets/images/divider/divider.webp";
 export function SectionDivider() {
   return (
     <div
+      data-aos="fade-in"
       className="
         relative
         z-30

@@ -44,7 +44,7 @@ ${message || "-"}
     >
       <div className="w-full">
         {/* Header */}
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-12 flex flex-col items-center" data-aos="fade-up">
           <span className="text-sm text-[#9BA8A1]">✦</span>
 
           <p
@@ -87,7 +87,7 @@ ${message || "-"}
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="w-full">
+        <form onSubmit={handleSubmit} className="w-full" data-aos="fade-up">
           {/* Nama */}
           <div className="text-left">
             <label

@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { BottomBar } from "./components/BottomBar";
 import { Hero } from "./components/Hero";
@@ -34,6 +36,19 @@ function App() {
     // Kembali ke paling atas
     window.scrollTo(0, 0);
   }, []);
+
+  // Init AOS saat undangan dibuka supaya animasi Hero terlihat,
+  // bukan tersembunyi di balik overlay Opening
+  useEffect(() => {
+    if (!isOpened) return;
+
+    const t = setTimeout(() => {
+      AOS.init({ once: true, duration: 800, offset: 80 });
+      AOS.refresh();
+    }, 50);
+
+    return () => clearTimeout(t);
+  }, [isOpened]);
 
   const handleOpenInvitation = async () => {
     const audio = audioRef.current;

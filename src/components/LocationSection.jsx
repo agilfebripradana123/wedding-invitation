@@ -19,7 +19,7 @@ export function LocationSection() {
     >
       <div className="w-full">
         {/* Header */}
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-12 flex flex-col items-center" data-aos="fade-up">
           <span className="text-sm text-[#9BA8A1]">✦</span>
 
           <p
@@ -63,6 +63,7 @@ export function LocationSection() {
 
         {/* Map */}
         <div
+          data-aos="zoom-in"
           className="
             relative
             h-[250px]
@@ -99,7 +100,7 @@ export function LocationSection() {
         </div>
 
         {/* Location Information */}
-        <div className="mt-8 flex flex-col items-center">
+        <div className="mt-8 flex flex-col items-center" data-aos="fade-up">
           <MapPin size={25} strokeWidth={1.3} className="text-[#9BA8A1]" />
 
           <h3

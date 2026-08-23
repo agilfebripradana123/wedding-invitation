@@ -16,7 +16,7 @@ export function WeddingSection() {
     >
       <div className="w-full">
         {/* Section Intro */}
-        <div className="mb-12">
+        <div className="mb-12" data-aos="fade-up">
           <span className="text-sm text-[#EAEAE5]">✦</span>
 
           <p
@@ -34,7 +34,7 @@ export function WeddingSection() {
         </div>
 
         {/* Bride */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
           <p
             className="
               text-[9px]
@@ -109,7 +109,7 @@ export function WeddingSection() {
         </div>
 
         {/* Groom */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
           <p
             className="
               text-[9px]
