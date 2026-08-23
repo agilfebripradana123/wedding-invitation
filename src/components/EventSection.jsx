@@ -102,21 +102,22 @@ export function EventSection() {
 
             <p
               className="
-                mt-3
-                text-sm
-                font-medium
-                text-[#EAEAE5]
-              "
+    mt-3
+    text-lg
+    font-bold
+    text-[#EAEAE5]
+  "
             >
               {reception.day}
             </p>
 
             <p
               className="
-                mt-1
-                text-xs
-                text-[#C2C8BF]
-              "
+    mt-1
+    text-base
+    font-bold
+    text-[#EAEAE5]
+  "
             >
               {reception.date}
             </p>
@@ -145,10 +146,11 @@ export function EventSection() {
 
             <p
               className="
-                text-xs
-                leading-relaxed
-                text-[#C2C8BF]
-              "
+    text-sm
+    font-bold
+    leading-relaxed
+    text-[#EAEAE5]
+  "
             >
               {reception.address}
             </p>
@@ -219,11 +221,11 @@ export function EventSection() {
 
             <p
               className="
-                mt-3
-                text-sm
-                font-medium
-                text-[#EAEAE5]
-              "
+    mt-3
+    text-base
+    font-bold
+    text-[#EAEAE5]
+  "
             >
               {akad.day}, {akad.date}
             </p>
@@ -232,17 +234,17 @@ export function EventSection() {
           {/* Time */}
           <div
             className="
-              mt-5
-              flex
-              items-center
-              justify-center
-              gap-2
-              text-[#C2C8BF]
-            "
+    mt-5
+    flex
+    items-center
+    justify-center
+    gap-3
+    text-[#EAEAE5]
+  "
           >
-            <Clock3 size={15} strokeWidth={1.3} />
+            <Clock3 size={19} strokeWidth={1.6} />
 
-            <span className="text-xs">{akad.time}</span>
+            <span className="text-base font-bold">{akad.time}</span>
           </div>
 
           {/* Location */}
@@ -268,10 +270,11 @@ export function EventSection() {
 
             <p
               className="
-                text-xs
-                leading-relaxed
-                text-[#C2C8BF]
-              "
+    text-sm
+    font-bold
+    leading-relaxed
+    text-[#EAEAE5]
+  "
             >
               {akad.address}
             </p>
