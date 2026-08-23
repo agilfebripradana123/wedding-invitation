@@ -120,4 +120,15 @@ export const weddingData = {
     whatsapp: "6281466716535",
     openingMessage: "",
   },
+
+  // ==========================================
+  // FOOTER
+  // ==========================================
+
+  footer: {
+    brand: "Gilfp",
+    tagline: "Digital Invitation",
+    whatsappUrl: "https://wa.me/6285868749808",
+    instagramUrl: "https://www.instagram.com/gilfp_",
+  },
 };

@@ -11,6 +11,7 @@ import { EventSection } from "./components/EventSection";
 import { GallerySection } from "./components/GallerySection";
 import { LocationSection } from "./components/LocationSection";
 import { RSVPSection } from "./components/RSVPSection";
+import { Footer } from "./components/Footer";
 import { Opening } from "./components/Opening";
 import { MusicPlayer } from "./components/MusicPlayer";
 
@@ -260,6 +261,8 @@ function App() {
           <SectionDivider />
 
           <RSVPSection />
+
+          <Footer />
         </div>
       </div>
 
